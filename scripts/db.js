@@ -55,4 +55,32 @@ let foodOptions = [
         "description": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano",
         "amount": 0
     },
+    {
+        "imageUrl": "/assets/img/salad_beef.jpg",
+        "name": "Warm beef arugula Salad",
+        "price": 16.90,
+        "description": "Beef, Arugula, Field Salad, Greek Feta, Cherry Tomatoas, Sund-Dried Tomatoas, Balsamic-Vinegar Dressing",
+        "amount": 0
+    },
+    {
+        "imageUrl": "/assets/img/salad_mini.jpg",
+        "name": "Mini green Salad",
+        "price": 7.90,
+        "description": "Green Salad, Cucumber, Carrots, Parsley, Radishes",
+        "amount": 0
+    },
+    {
+        "imageUrl": "/assets/img/salad_sea_food.jpg",
+        "name": "Green Salad with Sea Food",
+        "price": 16.90,
+        "description": "Mixed Greens, Cherry Tomatoas, Red Onion, Mussels, Squid Rings, Shrimp, Dijon Mustard-Lemon Dressing with Dill",
+        "amount": 0
+    },
+    {
+        "imageUrl": "/assets/img/salad_vegan_tofu.jpg",
+        "name": "Vegan green Salad with Tofu",
+        "price": 14.90,
+        "description": "Green Salad, Cherry Tomatoas, Cucumber, Baby Spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
+        "amount": 0
+    },
 ]
