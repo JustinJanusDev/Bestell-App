@@ -83,4 +83,4 @@ let foodOptions = [
         "description": "Green Salad, Cherry Tomatoas, Cucumber, Baby Spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
         "amount": 0
     },
-]
+];
