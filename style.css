@@ -1,8 +1,11 @@
 body {
-    min-height: 100dvh;
-
     display: flex;
     flex-direction: column;
+    
+    min-height: 100dvh;
+    max-width: 1440px;
+
+    margin: 0 auto;
 }
 
 
@@ -53,13 +56,61 @@ header {
             font-size: clamp(40px, 4vw, 48px);
             
             padding-bottom: 12px;
+
+            > .title_design {
+                color: var(--website-color);
+            }
         }
     }
 
     > span {
         font-size: clamp(22px, 4vw, 24px);
         font-weight: 700;
+        margin-bottom: 80px;
     }
+}
+
+
+.quick_navigation {
+    display: flex;
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    padding-left: 24px; 
+
+    .quick_button {
+        color: var(--primary-font-basket-color);
+        font-size: clamp(16px, 4vw, 22px);
+        font-weight: 400;
+
+        border: solid 2px var(--menu-border-color);
+        border-radius: 40px;
+
+        background-color: var(--menu-background-color);
+
+        padding: 8px 24px;
+
+        &:hover {
+            cursor: pointer;
+
+            transform: scale(1.05);
+
+            background-color: var(--menu-hover-background-color);
+        }
+    }
+}
+
+
+main {
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+.order_area {
+    display: flex;
+    align-items: flex-start;
 }
 
 
@@ -67,15 +118,20 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     flex: 1;
 }
 
+
 .title_menu {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
     background-color: var(--website-color);
+    box-shadow: 0 0 0 100vmax var(--website-color);
+    clip-path: inset(0 -100vmax);
 
     width: 100%;
     height: 72px;
@@ -83,7 +139,7 @@ article {
     margin-top: 80px;
     margin-bottom: 48px;
 
-    padding: 0px max(calc(50% - 720px), 120px);
+    padding: 0px max(calc(60% - 720px), 120px);
     gap: 40px;
 
     > img {
@@ -102,3 +158,13 @@ article {
         color: var(--basket-font-color);
     }
 }
+
+
+.order_basket {
+    background-color: var(--primary-font-basket-color);
+
+    width: 400px;
+    height: 800px;
+
+    border-radius: 24px;
+} 
