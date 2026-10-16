@@ -6,6 +6,13 @@ function countryCurrency(price) {
 }
 
 
+function navigationToCategoryTemplate(category) {
+    return `
+    <button class='quick_button' data-target='category${category.id}'> ${category.category} </button>
+    `
+}
+
+
 function implementBurgerDishes(indexBurger) {
     return `
     <div class='burger_dishes'>

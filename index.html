@@ -4,6 +4,7 @@
 
 <head>
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
@@ -31,7 +32,7 @@
     <section class="head_area">
         <nav>
             <img src="./assets/icons/logo.svg" alt="Bestell App Logo">
-            <img src="./assets/icons/menu_button.svg" alt="Menu Button">
+            <img class="button_menu" src="./assets/icons/menu_button.svg" alt="Menu Button">
         </nav>
     </section>
 
@@ -51,33 +52,36 @@
     </header>
 
 
-    <section class="quick_navigation">
-        <button class="quick_button">Burgers</button>
-        <button class="quick_button">Pizza</button>
-        <button class="quick_button">Salad</button>
+    <section class="quick_navigation" id="navigationToDishCategory">
+        <button class="quick_button" data-target="categoryBurger">Burgers</button>
+        <button class="quick_button" data-target="categoryPizza">Pizza</button>
+        <button class="quick_button" data-target="categorySalad">Salad</button>
     </section>
 
 
     <main>
         <section class="order_area">
-            <article>
+            <article id="menu">
                 <section class="title_menu">
                     <img src="./assets/icons/burger_icon.svg" alt="Image of Burger">
                     <h2>Burgers</h2>
                 </section>
                 <div id="burgerMenuSection"></div>
+                <section class="dishes"></section>
 
                 <section class="title_menu">
                     <img src="./assets/icons/pizza_icon.svg" alt="Image of Pizza">
                     <h2>Pizza <span class="title_information">(30cm)</span></h2>
                 </section>
                 <div id="pizzaMenuSection"></div>
+                <section class="dishes"></section>
 
                 <section class="title_menu">
                     <img src="./assets/icons/salad_icon.svg" alt="Image of Salad">
                     <h2>Salad</h2>
                 </section>
                 <div id="saladMenuSection"></div>
+                <section class="dishes"></section>
             </article>
 
             <aside>
