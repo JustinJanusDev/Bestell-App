@@ -1,3 +1,11 @@
+function countryCurrency(price) {
+    return price.toLocalString('de-DE', {
+        style: 'currency',
+        currency: 'EUR'
+    });
+}
+
+
 function implementBurgerDishes(indexBurger) {
     return `
     <div class='burger_dishes'>
