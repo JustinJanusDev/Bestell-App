@@ -28,3 +28,37 @@ function implementBurgerDishes(indexBurger) {
     </div>
     `
 }
+
+
+function implementPizzaDishes(indexPizza) {
+    return `
+    <div class='pizza_dishes'>
+        <img class='food_image' src=${websiteDishes.pizzaDishes[indexPizza]} alt='Photo ${[indexPizza + 1]}'>
+        <div class='food_information'>
+            <h3 class='food_title'>${websiteDishes.pizzaDishes[indexPizza].name}</h3>
+            <p class='food_description'>${websiteDishes.pizzaDishes[indexPizza].description}</p>
+        </div>
+        <div>
+            <span class='price_dishes'>${websiteDishes.pizzaDishes[indexPizza].price}</span>
+            <button onclick='moveOrderToBasket(${indexPizza})' class='btn' id='button${indexPizza}'> Add to Basket </button>
+        </div>
+    </div>
+    `
+}
+
+
+function implementSaladDishes(indexSalad) {
+    return `
+    <div class='salad_dishes'>
+        <img class='food_image' src=${websiteDishes.saladDishes[indexSalad]} alt='Photo ${[indexSalad + 1]}'>
+        <div class='food_information'>
+            <h3 class='food_title'>${websiteDishes.saladDishes[indexSalad].name}</h3>
+            <p class='food_description'>${websiteDishes.saladDishes[indexSalad].description}</p>
+        </div>
+        <div>
+            <span class='price_dishes'>${websiteDishes.saladDishes[indexSalad].price}</span>
+            <button onclick='moveOrderToBasket(${indexSalad})' class='btn' id='button${indexSalad}'> Add to Basket </button>
+        </div>
+    </div>
+    `
+}

@@ -40,3 +40,41 @@ function renderDishes() {
 
     navigationBarToDishes();
 }
+
+
+function renderDishes() {
+    let foodDishes = document.getElementById('menuSection');
+    foodDishes.innerHTML = '';
+    for (let indexBurger = 0; indexBurger < websiteDishes.burgerDishes.length; indexBurger++) {
+        
+        if(websiteDishes[indexBurger]) {
+            foodDishes.innerHTML += implementBurgerDishes(indexBurger);
+        }
+    }
+}
+
+
+function renderDishes() {
+    let foodDishes = document.getElementById('menuSection');
+    foodDishes.innerHTML = '';
+    for (let indexPizza = 0; indexPizza < websiteDishes.pizzaDishes.length; indexPizza++) {
+        
+        if(websiteDishes[indexPizza]) {
+            foodDishes.innerHTML += implementPizzaDishes(indexPizza);
+        }
+    }
+}
+
+
+function renderDishes() {
+    let foodDishes = document.getElementById('menuSection');
+    foodDishes.innerHTML = '';
+    for (let indexSalad = 0; indexSalad < websiteDishes.saladDishes.length; indexSalad++) {
+        
+        if(websiteDishes[indexSalad]) {
+            foodDishes.innerHTML += implementSaladDishes(indexSalad);
+        }
+    }
+}
+
+
