@@ -9,72 +9,71 @@ function navigationBarToDishes() {
 }
 
 
-function navigationButton(event) {
-    let navButton = event.target.closest('[data-target]');
+function quickCategoryButton(event) {
+    let navBarButton = event.target.closest('[data-target]');
 
-    if (!navButton) {
-        return; 
-    }
-
-    let dishArea = document.getElementById('navButton.dataset.target');
-
-    if (!dishArea) {
+    if(!navBarButton) {
         return;
     }
 
-    dishArea.scrollIntoView({
+    let movingNavBar = document.getElementById(navBarButton.dataset.target);
+    
+    if(!movingNavBar) {
+        return;
+    }
+
+    movingNavBar.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     })
 }
 
 
-function renderDishes() {
-    let dishSection = document.getElementById('menu');
+function renderMenu() {
+    let menuSection = document.getElementById('delivery_site');
 
-    if (!dishSection) {
+    if(!menuSection) {
         return;
     }
 
-    dishSection.innerHTML = menuDish.map(menuTemplate).join('');
+    menuSection.innerHTML = foodCategories.map(getDishTemplate).join('');
 
-    navigationBarToDishes();
+    setNavBar();
 }
 
 
-function renderDishes() {
-    let foodDishes = document.getElementById('menuSection');
-    foodDishes.innerHTML = '';
-    for (let indexBurger = 0; indexBurger < websiteDishes.burgerDishes.length; indexBurger++) {
-        
-        if(websiteDishes[indexBurger]) {
-            foodDishes.innerHTML += implementBurgerDishes(indexBurger);
-        }
+function orderMenu(event) {
+    let navButton = event.target.closest('[data-connect-category]');
+
+    if(!navButton) {
+        return;
     }
+
+    let websiteDishesCategory = Name(navButton.dataset.connectCategory);
+
+   addToBasket(websiteDishesCategory); 
 }
 
 
-function renderDishes() {
-    let foodDishes = document.getElementById('menuSection');
-    foodDishes.innerHTML = '';
-    for (let indexPizza = 0; indexPizza < websiteDishes.pizzaDishes.length; indexPizza++) {
-        
-        if(websiteDishes[indexPizza]) {
-            foodDishes.innerHTML += implementPizzaDishes(indexPizza);
-        }
+function showMenu() {
+    let menuSection = document.getElementById('delivery_site');
+    let quickNavSection = document.getElementById('navigationToDishCategory');
+
+    if(!menuSection) {
+        return;
     }
-}
 
+    menuSection.addEventListener('click', orderMenu);
 
-function renderDishes() {
-    let foodDishes = document.getElementById('menuSection');
-    foodDishes.innerHTML = '';
-    for (let indexSalad = 0; indexSalad < websiteDishes.saladDishes.length; indexSalad++) {
-        
-        if(websiteDishes[indexSalad]) {
-            foodDishes.innerHTML += implementSaladDishes(indexSalad);
-        }
+    if(quickNavSection) {
+        quickNavSection.addEventListener('click', quickCategoryButton);
     }
+
+    renderMenu();
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    showMenu();
+    filledBasket();
+})
