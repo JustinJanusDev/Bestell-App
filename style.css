@@ -3,9 +3,6 @@ body {
     flex-direction: column;
     
     min-height: 100dvh;
-    max-width: 1440px;
-
-    margin: 0 auto;
 }
 
 
@@ -108,8 +105,8 @@ header {
 
 
 main {
-    width: 100%;
-    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -138,9 +135,34 @@ main {
     }
 
     > img {
-        width: 96px;
-        height: 104px;
+        width: 88px;
+        height: 96px;
+    }
+}
 
-        scale: (1.5);
+
+.dish_card {
+    display: flex;
+    align-items: center;
+
+    border: 2px solid var(--menu-border-color);
+    background-color: var(--menu-background-color);
+
+    padding: 12px;
+    margin: 24px;
+
+    width: 700px;
+
+    border-radius: 16px;
+
+    .dish_image {
+        width: 204px;
+        height: 120px;
+
+        margin-right: 24px;
+
+        border-radius: 16px;
+
+        object-fit: cover;
     }
 }
