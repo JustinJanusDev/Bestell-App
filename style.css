@@ -165,4 +165,10 @@ main {
 
         object-fit: cover;
     }
+
+    .dish_information {
+        display: flex;
+        flex-direction: column;
+        align-self: baseline;
+    }
 }
