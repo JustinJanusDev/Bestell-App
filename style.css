@@ -78,8 +78,9 @@ header {
 
     gap: 16px;
 
-    padding-left: 24px;
-    margin-bottom: 40px; 
+    margin-top: 80px;
+
+    padding: 0px max(calc(50% - 720px), 135px);
 
     .quick_button {
         color: var(--primary-font-basket-color);
@@ -114,6 +115,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding: 0px max(calc(50% - 720px), 135px);
 }
 
 
@@ -122,6 +125,8 @@ main {
     align-items: center;
 
     padding-left: 40px;
+    margin-top: 56px;
+    margin-bottom: 24px;
 
     gap: 32px;
 
