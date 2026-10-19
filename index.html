@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="style.css">
 
 
+    <script type="module" src="scripts/script.js"></script>
+
+
 </head>
 
 
@@ -55,83 +58,43 @@
 
 
     <main>
-        <section class="delivery_site">
-            <div class="menu_section">
-                <section class="category_title">
-                    <div class="category_title_icon">
-                        <img class="category_icon" src="" alt="">
-                        <div class="title_section">
-                            <h2 id="foodTitle"></h2>
-                        </div>
-                    </div>
+        
+        
+        <section class="menu_section">
+
+
+                <section class="category_section">
+                    <h2>Burger</h2>
                 </section>
-                
-                <section class="menu_one" id="categoryBurgerMenu">
-                    <div class="menu_title_description" id="sectionBurger"></div>
-                    <div class="menu_dishes_price" id="burgerVariation"></div>
+
+                <section class="menu" id="categoryBurgerMenu">
+                    <div id="sectionBurger" class="dish_grid"></div>
                 </section>
 
 
-                <div class="category_title">
-                    <div class="category_title_icon">
-                        <img class="category_icon" src="" alt="">
-                        <div class="title_section">
-                            <h2></h2>
-                        </div>
-                    </div>
-                </div>
-                
-                <section class="menu_two" id="categoryPizzaMenu">
-                    <div class="menu_title_description" id="sectionPizza"></div>
-                    <div class="menu_dishes_price" id="pizzaVariation"></div>
+                <section class="category_section">
+                    <h2>Pizza</h2>
+                </section>
+
+                <section class="menu" id="categoryPizzaMenu">
+                    <div id="sectionPizza" class="dish_grid"></div>
                 </section>
 
 
-                <div class="category_title">
-                    <div class="category_title_icon">
-                        <img class="category_icon" src="" alt="">
-                        <div class="title_section">
-                            <h2></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <section class="menu_three" id="categorySaladMenu">
-                    <div class="menu_title_description" id="sectionSalad"></div>
-                    <div class="menu_dishes_price" id="saladVariation"></div>
+                <section class="category_section">
+                    <h2>Salad</h2>
                 </section>
-            </div>
 
-            <aside>
-                <section class="basket" id="basketFunction">
-                    <h2 class="basket_title"></h2>
-                    <div class="body_basket">
-                        <span class="empty_basket_description"></span>
-                        <img class="empty_basket_icon" src="" alt="">
-                        <div class="basket_delivery">
-                            <section class="basket_dish">
-                                <div class="basket_dish_title"></div>
-                                <div class="basket_dish_number"></div>
-                            </section>
-                        </div>
-                        <section class="basket_price_overview">
-                            <div class="dish_price"></div>
-                            <div class="amount_delivery"></div>
-                            <div class="total_price"></div>
-                        </section>
-                    </div>
+                <section class="menu" id="categorySaladMenu">
+                    <div id="sectionSalad" class="dish_grid"></div>
                 </section>
-            </aside>
+            
+
         </section>
 
     
     </main>
     
-
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="script.js"></script>
-
     
 </body>
 </html>
