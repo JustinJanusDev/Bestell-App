@@ -113,7 +113,6 @@ main {
 
 .menu_section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -238,5 +237,65 @@ main {
                 cursor: pointer;
             }
         }
+    }
+}
+
+
+.basket_section {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 56px;
+    padding-left: 80px;
+}
+
+
+.basket_area {
+    position: sticky;
+    top: 12px;
+
+    width: 440px;
+    height: 800px;
+
+    background-color: var(--primary-font-basket-color);
+
+    border-radius: 24px;
+
+    .basket_header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: clamp(24px, 4vw, 32px);
+
+        color: var(--menu-background-color);
+
+        padding-top: 80px;
+    }
+
+    .basket_information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: clamp(16px, 4vw, 24px);
+
+        color: var(--menu-background-color);
+
+        padding-top: 48px;
+
+        > span {
+            text-align: center;
+        }
+    }
+
+    .basket_icon {
+        display: flex;
+        justify-self: center;
+
+        margin-top: 120px;
+        
+        width: 120px;
+        height: 120px;
     }
 }
