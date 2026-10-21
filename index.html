@@ -102,11 +102,15 @@
                 <section class="basket_section">
                     <div class="basket_area">
                         <h2 class="basket_header">Your Basket</h2>
-                        <div class="basket_information">
+                        <div class="basket_information" id="basketItems">
                             <span>Nothing here yet.</span>
                             <span>Go ahead and choose something delicious!</span>
                         </div>
-                        <img class="basket_icon" src="./assets/icons/shopping_cart.svg" alt="">
+                        <img class="basket_icon" id="basketItems" src="./assets/icons/shopping_cart.svg" alt="">
+                        <div id="basket_summary">
+                            <h3>Total <span id="basketTotal">0,00&nbsp;€</span></h3>
+                            <button id="order" type="button" disabled>Order Now</button>
+                        </div>
                     </div>
                 </section>
         </section>
