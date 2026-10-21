@@ -14,7 +14,7 @@ export function createDishCard(dish) {
                 currency: "EUR"
             })}
             </p>
-            <button class="order_button" type="button" data-target="click">Add to Basket</button>
+            <button class="order_button add-to-basket" type="button" data-id="${dish.dishId}">Add to Basket</button>
         </div>
     </article>
     `;
