@@ -77,3 +77,25 @@ document.addEventListener("click", event => {
 
     addToBasket(dishId);
 });
+
+
+//==================================================
+// Move Menus to Basket 
+//==================================================
+
+
+function moveDishToBasket() {
+    const removePlaceholder = document.getElementById('basketItems')
+    const dishObject = document.getElementById('basket_summary');
+    const placeholder = removePlaceholder.value;
+    const dishCard = dishObject.value;
+
+    if(placeholder == ""|| dishCard == "") {
+        return;
+    }
+
+    basket.pop(placeholder);
+    basketOrder.push(dishCard);
+
+    renderBasket();
+}
