@@ -121,7 +121,34 @@ function removeFromBasket(dishId) {
 //==================================================
 
 
+function renderBasket() {
+    const basketContainer = document.getElementById('basketItems');
+    const totalElement = document.getElementById('basketTotal');
 
+    if(!basketContainer || !totalElement) {
+        return;
+    }
+
+    if(basket.length === 0) {
+        basketContainer.innerHTML = `
+            <div class="basket_information">
+                <span>Nothing here yet.</span>
+                <span>Go ahead and choose something delicious!</span>
+            </div>
+            `
+    } else {
+        basketContainer.innerHTML = basket.map(order => createBasketCard(order)).join("");
+    }
+
+    const total = basket.reduce((sum, order) => {
+        return sum + Math.round(order.price * 100) * order.quantity; 
+    }, 0);
+
+    totalElement.textContent = (total / 100).toLocaleString("de-DE", {
+        style: "currency",
+        currency: "EUR"
+    });
+}
 
 
 
