@@ -1,6 +1,5 @@
 export const websiteDishes = [
     {
-        "dishId": 1,
         "category": "burger",
         "dishes": [
             {
