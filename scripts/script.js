@@ -151,20 +151,31 @@ function renderBasket() {
 }
 
 
-
-
-
-
-
-
 document.addEventListener("click", event => {
-    const button = event.target.closest(".add-to-basket");
+    const addbutton = event.target.closest(".add-to-basket");
 
-    if(!button) {
+    if(addbutton) {
+        addToBasket(Number(addbutton.dataset.id));
         return;
     }
 
-    const dishId = Number(button.dataset.id);
+    const plusButton = event.target.closest(".basket_plus");
+    
+    if(plusButton) {
+        changeQuantity(Number(plusButton.dataset.id), 1);
+        return;
+    }
 
-    addToBasket(dishId);
+    const minusButton = event.target.closest(".basket_minus");
+
+    if(minusButton) {
+        changeQuantity(Number(minusButton.dataset.id), -1);
+        return;
+    }
+
+    const removeButton = event.target.closest(".basket_remove");
+
+    if(removeButton) {
+        removeFromBasket(Number(removeButton.dataset.id));
+    }
 });
