@@ -14,6 +14,11 @@ export function quickNavbar(nav) {
 }
 
 
+//==================================================
+// Import Currency
+//==================================================
+
+
 function formatPrice(price) {
     return Number(price).toLocaleString("de-DE", {
         style: "currency",
