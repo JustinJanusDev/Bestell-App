@@ -7,7 +7,26 @@ import { createDishCard, createBasketCard } from "./template.js";
 //==================================================
 
 
+document.addEventListener("click", event => {
+    const quickNavToBurger = event.target.closest('.sectionBurger');
 
+    if(quickNavToBurger) {
+        quickNavToBurger.scrollIntoView(behavior= smooth ,block= "start");
+        return;
+    }
+})
+
+
+function quickNavToCategories(sectionCategory) {
+    const sectionSubTitles = websiteDishes.find(
+        item => item.category === sectionCategory
+    );
+}
+
+
+document.querySelector("button").addEventListener("click", () => {
+    const subTitles = document.querySelector()
+})
 
 
 //==================================================
