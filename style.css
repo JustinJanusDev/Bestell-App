@@ -334,9 +334,32 @@ main {
         display: flex;
         justify-self: center;
 
-        margin-top: 120px;
+        margin-top: 96px;
         
         width: 120px;
         height: 120px;
+    }
+
+    .total_price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 80px;
+        gap: 24px;
+
+        > h3 {
+            color: var(--menu-background-color);
+        }
+
+        > button {
+            width: 112px;
+            height: 40px;
+
+            border-radius: 24px;
+            border: 1px solid var(--menu-border-color);
+
+            background-color: var(--menu-background-color);
+        }
     }
 }
