@@ -1,4 +1,4 @@
-export const websiteDishes = [
+const websiteDishes = [
     {
         "category": "burger",
         "dishes": [
@@ -105,4 +105,4 @@ export const websiteDishes = [
 ];
 
 
-export const basket = [];
+const basket = [];

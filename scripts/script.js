@@ -1,39 +1,3 @@
-import { websiteDishes, basket } from "./db.js";
-import { quickNavbar, createDishCard, createBasketCard } from "./template.js";
-
-
-//==================================================
-// Quick Navigation through the categories
-//==================================================
-
-
-const subTitles = {
-    burger: "sectionBurger",
-    pizza: "sectionPizza",
-    salad: "sectionSalad"
-};
-
-
-function navigationToCategories(category) {
-    const navigationData = websiteDishes.find(
-        title => title.category === category
-    );
-
-    if(!navigationData) {
-        return;
-    }
-
-    document.addEventListener("click", event =>{
-        const burgerCategory = event.target.closest(".subTitles");
-        
-        if(burgerCategory) {
-            goingTo(quick_navigation.dataset.id);
-            return;
-        }
-    })
-}
-
-
 //==================================================
 // Rendering Menus
 //==================================================

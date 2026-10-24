@@ -3,7 +3,7 @@
 //==================================================
 
 
-export function quickNavbar(nav) {
+function quickNavbar(nav) {
     return`
     <nav class="navigation">
         <button class="quick_navigation" type="button" data-id="${nav.category[category]}">Burger</button>
@@ -32,7 +32,7 @@ function formatPrice(price) {
 //==================================================
 
 
-export function createDishCard(dish) {
+function createDishCard(dish) {
     return `
     <article class="dish_card">
         <div class="dish_main_content">
@@ -57,28 +57,23 @@ export function createDishCard(dish) {
 //==================================================
 
 
-export function createBasketCard(order) {
+function createBasketCard(order) {
     return `
     <article class="basket_card">
         <div class="order_content">
-            <div class="oder_information">
-                <h3>${order.name}</h3>
-                <p>${formatPrice(order.price)}</p>
+            <div class="order_information">
+                <h3>1x ${order.name}</h3>
+                <div class="button_quantity>
+                    <button class="basket_remove" type="button" data-id="${order.dishId}">
+                        <img class="trash_can" src="./assets/icons/trash_can_unclicked.svg" alt="">
+                    </button>
+                    <button class="basket_minus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} reduzieren"> - </button>
+                    <button class="basket_plus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} erhöhen"> + </button>
+                </div>
             </div>
         </div>
         <div class="price_section">
-            <div class="quantity_controls">
-                <button class="basket_minus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} reduzieren"> - </button>
-                <button class="basket_plus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} erhöhen"> + </button>
-                <span class="basket_quantity>${order.quantity}</span>
-            </div>
-            <p class="dish_order_price">${formatPrice(
-                Math.round(order.price * 100) * order.quantity / 100
-            )}
-            </p>
-            <button class="basket_remove" type="button" data-id="${order.dishId}">
-                <img class="trash_can" src="./assets/icons/trash_can_unclicked.svg" alt="">
-            </button>
+            <p class=dish_order_price">${formatPrice(Math.round(order.price * 100) * order.quantity / 100)}</p>
         </div>
     </article>
     `
