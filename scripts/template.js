@@ -48,8 +48,8 @@ export function createBasketCard(order) {
         <div class="price_section">
             <div class="quantity_controls">
                 <button class="basket_minus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} reduzieren"> - </button>
-                <span class="basket_quantity>${order.quantity}</span>
                 <button class="basket_plus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} erhöhen"> + </button>
+                <span class="basket_quantity>${order.quantity}</span>
             </div>
             <p class="dish_order_price">${formatPrice(
                 Math.round(order.price * 100) * order.quantity / 100
