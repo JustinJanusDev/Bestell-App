@@ -47,7 +47,7 @@ export function createBasketCard(order) {
         </div>
         <div class="price_section">
             <div class="quantity_controls">
-                <button class="basket_minus type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} reduzieren"> - </button>
+                <button class="basket_minus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} reduzieren"> - </button>
                 <span class="basket_quantity>${order.quantity}</span>
                 <button class="basket_plus" type="button" data-id="${order.dishId}" arial-label="Menge von ${order.name} erhöhen"> + </button>
             </div>
@@ -55,7 +55,7 @@ export function createBasketCard(order) {
                 Math.round(order.price * 100) * order.quantity / 100
             )}
             </p>
-            <button class="basket-remove" type="button" data-id="${order.dishId}">
+            <button class="basket_remove" type="button" data-id="${order.dishId}">
                 <img class="trash_can" src="./assets/icons/trash_can_unclicked.svg" alt="">
             </button>
         </div>

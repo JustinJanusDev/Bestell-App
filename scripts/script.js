@@ -134,6 +134,7 @@ function renderBasket() {
             <div class="basket_information">
                 <span>Nothing here yet.</span>
                 <span>Go ahead and choose something delicious!</span>
+                <img class="basket_icon" id="basketItems" src="./assets/icons/shopping_cart.svg" alt="">
             </div>
             `
     } else {
@@ -179,3 +180,33 @@ document.addEventListener("click", event => {
         removeFromBasket(Number(removeButton.dataset.id));
     }
 });
+
+
+//==================================================
+// Delivery Button (Finished the Order)
+//==================================================
+
+
+const orderButton = document.getElementById('submitOrder');
+const orderDialog = document.getElementById('orderDialog');
+const closeDialogButton = document.getElementById('closeOrderDialog');
+
+if(orderButton && orderDialog) {
+    orderButton.addEventListener("click", () => {
+        if(basket.length === 0) {
+            alert("Your Basket is empty");
+            return;
+        }
+
+        orderDialog.showModal();
+    });
+}
+
+if(closeDialogButton && orderDialog) {
+    closeDialogButton.addEventListener("click", () => {
+        orderDialog.close();
+    });
+}
+
+
+renderBasket();
