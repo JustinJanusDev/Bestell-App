@@ -363,3 +363,30 @@ main {
         }
     }
 }
+
+
+.basket_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 2px solid var(--menu-border-color);
+    background-color: var(--menu-background-color);
+
+    padding: 12px;
+    margin: 24px;
+
+    width: 375px;
+    height: 170px;
+
+    border-radius: 16px;
+
+    .oder_information {
+        display: flex;
+        flex-direction: column;
+
+        color: var(--primary-font-basket-color);
+
+        font-size: 20px;
+    }
+}
