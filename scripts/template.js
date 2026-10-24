@@ -1,3 +1,19 @@
+//==================================================
+// Quick Navigation through the categories
+//==================================================
+
+
+export function quickNavbar(nav) {
+    return`
+    <nav class="navigation">
+        <button class="quick_navigation" type="button" data-id="${nav.category[category]}">Burger</button>
+        <button class="quick_navigation" type="button" data-id="${nav.category[category]}">Pizza</button>
+        <button class="quick_navigation" type="button" data-id="${nav.category[category]}">Salad</button>
+    </nav>
+    `
+}
+
+
 function formatPrice(price) {
     return Number(price).toLocaleString("de-DE", {
         style: "currency",

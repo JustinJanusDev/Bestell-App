@@ -1,5 +1,5 @@
 import { websiteDishes, basket } from "./db.js";
-import { createDishCard, createBasketCard } from "./template.js";
+import { quickNavbar, createDishCard, createBasketCard } from "./template.js";
 
 
 //==================================================
@@ -7,26 +7,31 @@ import { createDishCard, createBasketCard } from "./template.js";
 //==================================================
 
 
-document.addEventListener("click", event => {
-    const quickNavToBurger = event.target.closest('.sectionBurger');
+const subTitles = {
+    burger: "sectionBurger",
+    pizza: "sectionPizza",
+    salad: "sectionSalad"
+};
 
-    if(quickNavToBurger) {
-        quickNavToBurger.scrollIntoView(behavior= smooth ,block= "start");
+
+function navigationToCategories(category) {
+    const navigationData = websiteDishes.find(
+        title => title.category === category
+    );
+
+    if(!navigationData) {
         return;
     }
-})
 
-
-function quickNavToCategories(sectionCategory) {
-    const sectionSubTitles = websiteDishes.find(
-        item => item.category === sectionCategory
-    );
+    document.addEventListener("click", event =>{
+        const burgerCategory = event.target.closest(".subTitles");
+        
+        if(burgerCategory) {
+            goingTo(quick_navigation.dataset.id);
+            return;
+        }
+    })
 }
-
-
-document.querySelector("button").addEventListener("click", () => {
-    const subTitles = document.querySelector()
-})
 
 
 //==================================================
