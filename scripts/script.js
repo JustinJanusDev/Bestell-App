@@ -31,7 +31,11 @@ function setEventListener() {
 
 function renderMenus() {
     const loadingMenus = document.getElementById('');
-    
+    const category = "";
+
+    for (let indexCategory = 0; indexCategory < loadingMenus.length; indexCategory++) {
+        category = array[indexCategory];  
+    }
 }
 
 
