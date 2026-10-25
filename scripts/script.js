@@ -1,5 +1,5 @@
 //==================================================
-// Render Function
+// Render Function and EventListenerData
 //==================================================
 
 
@@ -9,12 +9,30 @@ function init() {
 }
 
 
+function setEventListener() {
+    const navButton = document.querySelector('');
+    const orderButton = document.querySelector('');
+    const quantityPlus = document.querySelector('');
+    const quantityMinus = document.querySelector('');
+    const removeButton = document.querySelector('');
+
+    navButton.addEventListener('click', moveToSection);
+    orderButton.addEventListener('click', addToBasket);
+    quantityPlus.addEventListener('click', orderQuantityMore);
+    quantityMinus.addEventListener('click', orderQuantityLower);
+    removeButton.addEventListener('click', deleteOrder);
+}
+
+
 //==================================================
 // Rendering Menus
 //==================================================
 
 
-
+function renderMenus() {
+    const loadingMenus = document.getElementById('');
+    
+}
 
 
 //==================================================
