@@ -29,12 +29,9 @@ function setEventListener() {
 
 
 function renderCategory(category) {
-    const renderMenu = websiteDishes.find(
-        item => item.category === category
-    ); 
-
-    if(!renderMenu || !dishes) {
-        return;
+    const renderMenu = document.getElementById('menu_content');
+    for (let indexDishes = 0; indexDishes < category.length; indexDishes++) {
+        renderMenu.innerHTML += createDishCard[indexDishes];
     }
 }
 
