@@ -5,7 +5,6 @@
 
 function init() {
     renderCategory();
-    renderBasket();
 }
 
 
@@ -29,12 +28,13 @@ function setEventListener() {
 //==================================================
 
 
-function renderMenus() {
-    const loadingMenus = document.getElementById('');
-    const category = "";
+function renderCategory(category) {
+    const renderMenu = websiteDishes.find(
+        item => item.category === category
+    ); 
 
-    for (let indexCategory = 0; indexCategory < loadingMenus.length; indexCategory++) {
-        category = array[indexCategory];  
+    if(!renderMenu || !dishes) {
+        return;
     }
 }
 

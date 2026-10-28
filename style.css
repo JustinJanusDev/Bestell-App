@@ -132,6 +132,7 @@ header {
     .quick_button {
         font-size: 20px;
         font-weight: 600;
+        text-decoration: none;
 
         color: var(--nav-button-text-color);
 
