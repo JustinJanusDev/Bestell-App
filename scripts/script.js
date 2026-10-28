@@ -28,10 +28,21 @@ function setEventListener() {
 //==================================================
 
 
-function renderCategory(category) {
-    const renderMenu = document.getElementById('menu_content');
-    for (let indexDishes = 0; indexDishes < category.length; indexDishes++) {
-        renderMenu.innerHTML += createDishCard[indexDishes];
+function menuSection(createDishCard) {
+    const burger = categoryBurgerMenu;
+    const pizza = categoryPizzaMenu;
+    const salad = categorySaladMenu;
+}
+
+
+function renderCategory(websiteDishes) {
+    const categoryData = websiteDishes.find(
+        item => item.category === category
+    );
+    const menuDishes = categoryData.dishes;
+
+    for (let indexDish = 0; indexDish < menuDishes.length; indexDish++) {
+        menuDishes.innerHTML += categoryData.dishes.join("")
     }
 }
 
