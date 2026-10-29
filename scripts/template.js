@@ -16,19 +16,19 @@ function formatPrice(price) {
 //==================================================
 
 
-function createDishCard(indexDishes) {
+function createDishCard(dish) {
     return `
     <article class='dish_card'>
         <section class='dish_card_body'>
-            <img class='dish_image' src='${indexDishes.imageUrl}' alt='${indexDishes.name}'>
+            <img class='dish_image' src='${dish.imageUrl}' alt='${dish.name}'>
             <div class='dish_information'>
-                <h3>${indexDishes.name}</h3>
-                <p>${indexDishes.description}</p>
+                <h3>${dish.name}</h3>
+                <p>${dish.description}</p>
             </div>
         </section>
         <section class='price_order_section'>
-            <p class='dish_price'>${formatPrice(indexDishes.price)}</p>
-            <button class='order_button' type='button' data-id='delivery'>Add to Basket</button>
+            <p class='dish_price'>${formatPrice(dish.price)}</p>
+            <button class='order_button' type='button' data-id='${dish.dishId}'>Add to Basket</button>
         </section>
     </article>
     `

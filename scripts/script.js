@@ -4,7 +4,9 @@
 
 
 function init() {
-    renderCategory();
+    renderCategory("burger", "sectionBurger");
+    renderCategory("pizza", "sectionPizza");
+    renderCategory("salad", "sectionSalad");
 }
 
 
@@ -28,22 +30,25 @@ function setEventListener() {
 //==================================================
 
 
-function menuSection(createDishCard) {
-    const burger = categoryBurgerMenu;
-    const pizza = categoryPizzaMenu;
-    const salad = categorySaladMenu;
-}
-
-
-function renderCategory(websiteDishes) {
+function renderCategory(category, containerId) {
     const categoryData = websiteDishes.find(
         item => item.category === category
     );
-    const menuDishes = categoryData.dishes;
 
-    for (let indexDish = 0; indexDish < menuDishes.length; indexDish++) {
-        menuDishes.innerHTML += categoryData.dishes.join("")
+    const menuContainer = document.getElementById(containerId);
+
+    if(!categoryData || !menuContainer) {
+        console.error("Category or Container can't be founded", category, containerId);
+        return;
     }
+
+    let dishesHTML = "";
+
+    for (let i = 0; i < categoryData.dishes.length; i++) {
+        dishesHTML += createDishCard(categoryData.dishes[i]);
+    }
+
+    menuContainer.innerHTML = dishesHTML;
 }
 
 
