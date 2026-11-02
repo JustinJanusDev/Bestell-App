@@ -190,6 +190,7 @@ header {
         gap: 32px;
 
         padding: 8px 300px 8px 32px;
+        margin-top: 96px;
 
         box-shadow: 0px 0px 10px 2px var(--dish-title-box-color);
 
@@ -235,5 +236,93 @@ header {
 
             color: var(--dish-title-color);
         }
+    }
+}
+
+
+/*==================================================
+// Dishes
+//================================================*/
+
+
+.dish_card {
+    display: flex;
+    align-items: center;
+
+    width: 744px;
+    height: 200px;
+
+    padding: 0px 24px;
+    margin-bottom: 64px;
+
+    box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
+    border-radius: 24px;
+
+    background-color: var(--nav-button-background-color);
+
+    &:hover {
+        transform: scale(1.01);
+
+        box-shadow: 0px 0px 10px 5px var(--website-title-highlight-color);
+    }
+}
+
+
+.dish_card_body {
+    display: flex;
+
+    > img {
+        height: 150px;
+        width: 250px;
+
+        border-radius: 12px;
+
+        object-fit: cover;
+    }
+
+    .dish_information {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0px 8px 0px 8px;
+
+        width: 360px;
+
+        > h3 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        > p {
+            font-size: 16px;
+            font-weight: 500;
+
+            margin-top: 8px;
+        }
+    }
+}
+
+
+.price_order_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 56px;
+
+    .dish_price {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .order_button {
+        width: 96px;
+        height: 40px;
+
+        border-radius: 40px;
+        box-shadow: 0px 0px 10px 2px var(--dish-title-box-color);
+        background-color: var(--website-color);
+
+        color: var(--website-title-color);
     }
 }
