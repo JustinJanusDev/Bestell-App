@@ -81,7 +81,36 @@ function addMenuToBasket(dishId) {
 //==================================================
 
 
+function orderQuantityMore(dishId) {
+    const dishOrder = basket.find(
+        item => item.dishId === dishId
+    );
 
+    if(!dishOrder) {
+        return; 
+    }
+
+    dishOrder.quantity++;
+
+    renderBasket();
+}
+
+
+function orderQuantityLower(dishId) {
+    const dishOrder = basket.find(
+        item => item.dishId === dishId
+    );
+
+    if(!dishOrder) {
+        return;
+    }
+
+    if(dishOrder.quantity > 1) {
+        dishOrder.quantity--;
+    }
+
+    renderBasket();
+}
 
 
 //==================================================
