@@ -1,5 +1,5 @@
 //==================================================
-// Render Function and EventListenerData
+// Render Function
 //==================================================
 
 
@@ -7,21 +7,6 @@ function init() {
     renderCategory("burger", "sectionBurger");
     renderCategory("pizza", "sectionPizza");
     renderCategory("salad", "sectionSalad");
-}
-
-
-function setEventListener() {
-    const navButton = document.querySelector('');
-    const orderButton = document.querySelector('');
-    const quantityPlus = document.querySelector('');
-    const quantityMinus = document.querySelector('');
-    const removeButton = document.querySelector('');
-
-    navButton.addEventListener('click', moveToSection);
-    orderButton.addEventListener('click', addToBasket);
-    quantityPlus.addEventListener('click', orderQuantityMore);
-    quantityMinus.addEventListener('click', orderQuantityLower);
-    removeButton.addEventListener('click', deleteOrder);
 }
 
 
@@ -58,7 +43,7 @@ function renderCategory(category, containerId) {
 
 
 function addMenuToBasket() {
-    
+     
 }
 
 

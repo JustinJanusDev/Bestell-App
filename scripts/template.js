@@ -28,7 +28,7 @@ function createDishCard(dish) {
         </section>
         <section class='price_order_section'>
             <p class='dish_price'>${formatPrice(dish.price)}</p>
-            <button class='order_button' type='button' data-id='${dish.dishId}'>Add to Basket</button>
+            <button class='order_button' type='button' data-id='${dish.dishId}' onclick='addToBasket'>Add to Basket</button>
         </section>
     </article>
     `
@@ -50,11 +50,11 @@ function moveToBasket(dish) {
         </section>
         <section class='quantity_price'>
             <div class='order_quantity'>
-                <button class='remove_dishes' type='button'>
+                <button class='remove_dishes' type='button' data-id='${dish.dishId}' onclick='deleteOrder'>
                     <img class='trash_can' src='./assets/icons/trash_can_unclicked.svg' alt='trash can icon'>
                 </button>
                 <p class='quantity_value'></p>
-                <button class='add_dish_order' type='button'> + </button>
+                <button class='add_dish_order' type='button' data-id='${dish.dishId}' onclick='orderQuantityMore'> + </button>
             <p class='price_of_dish'>${formatPrice(dish.price)}</p>
         </section>
     </article>
@@ -75,9 +75,9 @@ function basketDishHigherValue(dish) {
         </section>
         <section class='quantity_price'>
             <div class='order_quantity'>
-                <button class='remove_dishes' type='button'> - </button>
+                <button class='take_away_dishes' type='button' data-id='${dish.dishId}' onclick='orderQuantityLower'> - </button>
                 <p class='quantity_value'></p>
-                <button class='add_dish_order' type='button'> + </button>
+                <button class='add_dish_order' type='button' data-id='${dish.dishId}' onclick='orderQuantityMore'> + </button>
             <p class='price_of_dish'>${formatPrice(dish.price)}</p>
         </section>
     </article>
