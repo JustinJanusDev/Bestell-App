@@ -60,3 +60,26 @@ function moveToBasket(dish) {
     </article>
     `
 }
+
+
+function basketDishHigherValue(dish) {
+    return `
+    <article class='basket_dish_card'>
+        <section class='basket_dish_body'>
+            <div class='dish_name_delete_icon'>
+                <h3>${dish.name}</h3>
+                <button class='remove_dishes' type='button'>
+                    <img class='trash_can' src='./assets/icons/trash_can_unclicked.svg' alt='trash can icon'>
+                </button>
+            </div>
+        </section>
+        <section class='quantity_price'>
+            <div class='order_quantity'>
+                <button class='remove_dishes' type='button'> - </button>
+                <p class='quantity_value'></p>
+                <button class='add_dish_order' type='button'> + </button>
+            <p class='price_of_dish'>${formatPrice(dish.price)}</p>
+        </section>
+    </article>
+    `
+}
