@@ -40,3 +40,20 @@ function createDishCard(dish) {
 //==================================================
 
 
+function moveToBasket(dish) {
+    return `
+    <article class='basket_dish_card'>
+        <section class='basket_dish_body'>
+            <div class='dish_name'>
+                <h3>${dish.name}</h3>
+            </div>
+        </section>
+        <section class='quantity_price'>
+            <button class='remove_dishes' type='button' data-id='${dish.dishId}'>
+                <img class='trash_can' src='./assets/icons/trash_can_unclicked.svg' alt='trash can icon'>
+            </button>
+            <p class='price_of_dish'>${formatPrice(dish.price)}</p>
+        </section>
+    </article>
+    `
+}
