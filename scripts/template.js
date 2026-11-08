@@ -49,9 +49,12 @@ function moveToBasket(dish) {
             </div>
         </section>
         <section class='quantity_price'>
-            <button class='remove_dishes' type='button' data-id='${dish.dishId}'>
-                <img class='trash_can' src='./assets/icons/trash_can_unclicked.svg' alt='trash can icon'>
-            </button>
+            <div class='order_quantity'>
+                <button class='remove_dishes' type='button'>
+                    <img class='trash_can' src='./assets/icons/trash_can_unclicked.svg' alt='trash can icon'>
+                </button>
+                <p class='quantity_value'></p>
+                <button class='add_dish_order' type='button'> + </button>
             <p class='price_of_dish'>${formatPrice(dish.price)}</p>
         </section>
     </article>
