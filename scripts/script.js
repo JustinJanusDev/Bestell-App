@@ -7,6 +7,8 @@ function init() {
     renderCategory("burger", "sectionBurger");
     renderCategory("pizza", "sectionPizza");
     renderCategory("salad", "sectionSalad");
+
+    renderBasket();
 }
 
 
@@ -42,8 +44,41 @@ function renderCategory(category, containerId) {
 //==================================================
 
 
-function addMenuToBasket() {
-     
+function getDishbyId(dishId) {
+    return websiteDishes
+        .flatMap(category => category.dishes)
+        .find(dish => dish.dishId === dishId);
+}
+
+
+function addMenuToBasket(dishId) {
+    const movingDish = getDishbyId(dishId);
+
+    if(!movingDish) {
+        console.error("Dish can't be founded", dishId);
+        return;
+    }
+
+    const dishOrder = basket.find(
+        item => item.dishId === dishId
+    );
+
+    let dishesHTML = "";
+
+    for (let iBasket = 0; iBasket < movingDish.length; iBasket++) {
+        dishesHTML += moveToBasket(movingDish.dishes[iBasket]);
+    }
+
+    if(dishOrder) {
+        dishOrder.quantity++;
+    } else {
+        basket.push({
+            ...movingDish,
+            quantity: 1
+        });
+    }
+
+    renderBasket();
 }
 
 
