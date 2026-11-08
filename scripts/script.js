@@ -138,7 +138,37 @@ function deleteOrder(dishId) {
 //==================================================
 
 
+function renderBasket() {
+    const basketContainer = document.getElementById('basketItems');
 
+    if(!basketContainer) {
+        return;
+    }
+
+    if(basket.length === 0) {
+        basketContainer.innerHTML = `
+        <span> Nothing here yet. </span>
+        <span> Go ahead and choose something delicious! </span>
+        `
+        return;
+    }
+
+    let basketHTML = "";
+    let subtotal = 0;
+
+    for (let i = 0; i < basket.length; i++) {
+        basketHTML += moveToBasket(basket[i]);
+        subtotal += basket[i].price * basket[i].quantity;
+    }
+
+    const taxRate = 0.19;
+    const tax = subtotal * taxRate;
+    const total = subtotal + tax;
+
+    basketHTML += basketSummary(subtotal, tax, total);
+
+    basketContainer.innerHTML = basketHTML;
+}
 
 
 //==================================================
