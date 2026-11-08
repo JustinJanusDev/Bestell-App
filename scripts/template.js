@@ -61,10 +61,8 @@ function moveToBasket(order) {
                     <button class='take_away_dishes' type='button' onclick='orderQuantityLower(${order.dishId})'> - </button>
                 `}
                 <button class='add_dish_order' type='button' onclick='orderQuantityMore(${order.dishId})'> + </button>
+                <p class='price_of_dish'> ${formatPrice(order.price * order.quantity)} </p>
             </div>
-        </section>
-        <section>
-            <p class='price_of_dish'> ${formatPrice(order.price * order.quantity)} </p>
         </section>
     </article>
     `

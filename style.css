@@ -209,8 +209,12 @@ header {
         position: sticky;
         top: 24px;
 
-        width: 350px;
-        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 450px;
+        height: 700px;
 
         box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
 
@@ -326,5 +330,53 @@ header {
         background-color: var(--website-color);
 
         color: var(--website-title-color);
+    }
+}
+
+
+/*==================================================
+// Basket
+//================================================*/
+
+
+.basket_dish_card {
+    height: 150px;
+    width: 400px;
+
+    box-shadow: 0px 0px 10px 2px var(--dish-title-box-color);
+    border-radius: 24px;
+
+    background-color: var(--nav-button-background-color);
+}
+
+
+.basket_dish_body {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+
+    padding: 12px 16px;
+
+    .order_quantity {
+        display: flex;
+        justify-content: space-between;
+
+        gap: 24px;
+    }
+}
+
+
+.dish_name_delete_icon {
+    display: flex;
+    justify-content: space-between;
+
+    > h3 {
+        font-size: 24px;
+
+        color: var(--website-color);
+
+        padding-right: 24px;
+        margin-right: 20px;
     }
 }
