@@ -25,7 +25,7 @@ function renderCategory(category, containerId) {
     const menuContainer = document.getElementById(containerId);
 
     if(!categoryData || !menuContainer) {
-        console.error("Category or Container can't be founded", category, containerId);
+        console.error("Category or Container can't be found", category, containerId);
         return;
     }
 
@@ -55,19 +55,13 @@ function addMenuToBasket(dishId) {
     const movingDish = getDishbyId(dishId);
 
     if(!movingDish) {
-        console.error("Dish can't be founded", dishId);
+        console.error("Dish can't be found", dishId);
         return;
     }
 
     const dishOrder = basket.find(
         item => item.dishId === dishId
     );
-
-    let dishesHTML = "";
-
-    for (let iBasket = 0; iBasket < movingDish.length; iBasket++) {
-        dishesHTML += moveToBasket(movingDish.dishes[iBasket]);
-    }
 
     if(dishOrder) {
         dishOrder.quantity++;
