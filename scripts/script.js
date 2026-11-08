@@ -44,7 +44,7 @@ function renderCategory(category, containerId) {
 //==================================================
 
 
-function getDishbyId(dishId) {
+function getDishById(dishId) {
     return websiteDishes
         .flatMap(category => category.dishes)
         .find(dish => dish.dishId === dishId);
@@ -52,7 +52,7 @@ function getDishbyId(dishId) {
 
 
 function addMenuToBasket(dishId) {
-    const movingDish = getDishbyId(dishId);
+    const movingDish = getDishById(dishId);
 
     if(!movingDish) {
         console.error("Dish can't be found", dishId);
@@ -118,7 +118,19 @@ function orderQuantityLower(dishId) {
 //==================================================
 
 
+function deleteOrder(dishId) {
+    const dishIndex = basket.findIndex(
+        item => item.dishId === dishId
+    );
 
+    if(dishIndex === -1) {
+        return;
+    }
+    
+    basket.splice(dishIndex, 1);
+
+    renderBasket();
+}
 
 
 //==================================================
