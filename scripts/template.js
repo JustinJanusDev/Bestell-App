@@ -52,6 +52,7 @@ function moveToBasket(order) {
                     </button>
                 ` : ""}
             </div>
+            <div class='basket_dish_body_bottom'> 
             <div class='order_quantity'>
                 ${order.quantity  === 1 ? `
                     <button class='remove_dishes' type='button' onclick='deleteOrder(${order.dishId})'>
@@ -60,7 +61,10 @@ function moveToBasket(order) {
                     ` : `
                     <button class='take_away_dishes' type='button' onclick='orderQuantityLower(${order.dishId})'> - </button>
                 `}
+                <h3 class='quantity_number'> ${order.quantity} </h3>
                 <button class='add_dish_order' type='button' onclick='orderQuantityMore(${order.dishId})'> + </button>
+            </div>
+            <div>
                 <p class='price_of_dish'> ${formatPrice(order.price * order.quantity)} </p>
             </div>
         </section>
