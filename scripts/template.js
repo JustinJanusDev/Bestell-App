@@ -77,18 +77,19 @@ function basketSummary(subtotal, tax, total) {
     return `
     <section class='total_price'>
         <div class='subtotal'>
-            <span> Subtotal </span>
+            <h3> Subtotal </h3>
             <span> ${formatPrice(subtotal)} </span>
         </div>
         <div class='tax'>
-            <span> Tax </span>
+            <h3> Tax </h3>
             <span> ${formatPrice(tax)} </span>
         </div>
+        <div class='seperation'></div>
         <div class='total'>
             <h3> Total </h3>
-            <h3> ${formatPrice(total)} </h3>
+            <span> ${formatPrice(total)} </span>
         </div>
-        <button id='submitOrder' type='button'> Order Now </button>
+        <button class='submit_order_button' id='submitOrder' type='button'> Order Now </button>
     </section>
     `
 }
