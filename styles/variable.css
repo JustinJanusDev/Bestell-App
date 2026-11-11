@@ -21,4 +21,7 @@
 
     --trash-can-background-color: rgb(247, 158, 158);
     --trash-can-border-color: rgb(243, 117, 117);
+
+    --quantity-button-border-color: rgb(250, 184, 137);
+    --quantity-button-background-color: rgb(250, 166, 106);
 }
