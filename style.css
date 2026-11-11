@@ -382,13 +382,14 @@ header {
     display: flex;
     justify-content: space-between;
 
+    width: 375px;
+
     > h3 {
+        text-align: start;
+
         font-size: 24px;
 
         color: var(--website-color);
-
-        padding-right: 24px;
-        margin-right: 20px;
     }
 }
 
