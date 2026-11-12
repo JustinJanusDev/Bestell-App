@@ -96,5 +96,13 @@ function basketSummary(subtotal, tax, total) {
 
 
 //==================================================
-// Basket price section
+// Dialog Window
 //==================================================
+
+
+function submitButton() {
+    return `
+    <dialog id='submitOrder' onclick='openDeliveryWindow'>
+    
+    `
+}

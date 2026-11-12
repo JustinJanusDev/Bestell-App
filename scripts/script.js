@@ -176,3 +176,9 @@ function renderBasket() {
 //==================================================
 
 
+function deliveryButton(deliveryInformation) {
+    const dialogRef = document.getElementById('submitOrder');
+    createDialog(deliveryInformation);
+    dialogRef.showModal();
+    document.body.classList.toggle('showDelivery')
+}
