@@ -93,16 +93,3 @@ function basketSummary(subtotal, tax, total) {
     </section>
     `
 }
-
-
-//==================================================
-// Dialog Window
-//==================================================
-
-
-function submitButton() {
-    return `
-    <dialog id='submitOrder' onclick='openDeliveryWindow'>
-    
-    `
-}

@@ -109,12 +109,15 @@
                 </section>
         </section>
 
-        <dialog>
-            <h2>Thanks for your Order</h2>
+        <dialog id="submitOrder" onclick="openCloseDialog(event)">
+            <article onclick="stopPropagation(event)">
+                <h2>Thanks for your Order</h2>
 
-            <p>Your Product is on your way</p>
-
-            <button id="closeOrderDialog" type="button">close</button>
+                <img src="./assets//icons/food_truck_icon.svg" alt="Foodtruck icon">
+                
+                <p>Your Product is on its way</p>
+                <button class="close_button_dialog" id="closeOrderDialog" type="button" onclick="openCloseDialog()">close</button>
+            </article>
         </dialog>
 
     
