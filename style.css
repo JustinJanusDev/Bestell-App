@@ -580,3 +580,47 @@ dialog {
         }
     }
 }
+
+
+/*==================================================
+// footer
+//================================================*/
+
+
+footer {
+    margin-top: 128px;
+
+    height: 128px;
+
+    background-image: linear-gradient(to bottom, var(--footer-background-top-color), var(--footer-background-bottom-color));
+
+    .footer_links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 80px;
+
+        height: 128px;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        color: var(--website-color);
+
+        > img {
+            height: 20px;
+            width: 20px;
+
+            margin-right: 8px;
+        }
+    }
+}
