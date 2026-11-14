@@ -176,20 +176,15 @@ function renderBasket() {
 //==================================================
 
 
-function deliveryButton(deliveryInformation) {
+function deliveryButton() {
     let dialogRef = document.getElementById('submitOrder');
     dialogRef.showModal();
     document.body.classList.add('showDelivery');
 }
 
 
-function openCloseDialog(event) {
+function openCloseDialog() {
     let dialogRef = document.getElementById('submitOrder');
-
-    if(event && event.target !== dialogRef) {
-        return;
-    }
-
     dialogRef.close();
     document.body.classList.remove('showDelivery');
 }
