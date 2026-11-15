@@ -107,7 +107,7 @@ header {
     }
 
     > span {
-        font-size: clamp(20px, 4vw, 24px);
+        font-size: clamp(20px, 2vw, 24px);
         
         color: var(--website-title-color);
 
@@ -134,7 +134,7 @@ header {
     padding-left: 64px;
 
     .quick_button {
-        font-size: 20px;
+        font-size: clamp(16px, 2vw, 20px);
         font-weight: 600;
         text-decoration: none;
 
@@ -198,8 +198,7 @@ header {
         box-shadow: 0px 0px 10px 2px var(--dish-title-box-color);
 
         > h2 {
-            font-size: 32px;
-
+            font-size: clamp(24px, 4vw, 32px);
             color: var(--dish-title-color);
         }
     }
@@ -366,7 +365,7 @@ header {
         width: 360px;
 
         > h3 {
-            font-size: 24px;
+            font-size: clamp(16px, 2vw, 24px);
             font-weight: 700;
         }
 
@@ -388,7 +387,7 @@ header {
     gap: 56px;
 
     .dish_price {
-        font-size: 24px;
+        font-size: clamp(16px, 2vw, 24px);
         font-weight: 700;
     }
 
@@ -621,5 +620,222 @@ footer {
 
             margin-right: 8px;
         }
+    }
+}
+
+
+/*==================================================
+// responsive
+//================================================*/
+
+
+@media screen and (max-width: 1330px) {
+    
+
+    .category_section {
+        
+        .category_header {
+            padding: 6px 200px 6px 24px;
+        }
+    }
+
+
+    .dish_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 564px;
+        height: 300px;
+
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+
+
+    .dish_card_body {
+        display: flex;
+        flex-direction: column;
+
+        > img {
+            height: 100px;
+            width: 400px;
+        }
+
+        .dish_information {
+            display: flex;
+            flex-direction: column;
+
+            padding: 0px 8px 0px 8px;
+
+            width: 360px;
+        }
+    }
+
+
+    .price_order_section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        gap: 210px;
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    
+
+    .menu_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding-right: 64px;
+    }
+
+    .category_section {
+
+        .category_header {
+            padding: 8px 400px 8px 32px;
+        }
+    }
+
+
+    .basket_section {
+        margin-top: 80px;
+        visibility: hidden;
+
+        .basket_area {
+            width: 100%;
+            height: 128px;
+
+            background-image: linear-gradient(to bottom, var(--footer-background-top-color), var(--footer-background-bottom-color));
+        }
+    }
+
+    /* .basket_section {
+    
+
+    .basket_area {
+        position: fixed;
+        bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 128px;
+
+        box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
+
+        border-radius: 24px;
+    
+        .basket_header {
+            display: flex;
+            justify-content: center;
+
+            padding-top: 80px;
+
+            font-size: clamp(24px, 4vw, 32px);
+
+            color: var(--website-title-highlight-color);
+        }
+
+        .basket_information {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            padding-top: 40px;
+
+            font-size: 20px;
+
+            color: var(--dish-title-color);
+
+            overflow: overlay;
+            height: 450px;
+
+            .total_price {
+                position: absolute;
+                top: 600px;
+                left: 150px;
+                right: 140px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                .subtotal, .tax {
+                    display: flex;
+                    align-items: center;
+
+                    gap: 24px;
+
+                    > h3 {
+                    color: var(--website-title-highlight-color);
+                    }
+                }
+
+                .seperation {
+                    border: 1px solid var(--website-title-color);
+
+                    margin-top: 12px;
+
+                    width: 300px;
+                }
+
+                .total {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    margin-top: 12px;
+
+                    > h3 {
+                    font-size: 28px;
+
+                    color: var(--trash-can-border-color);
+                    }
+
+                    > span {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+} */
+    
+
+    .dish_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 764px;
+        height: 350px;
+    }
+
+
+    .dish_card_body {
+
+        > img {
+            height: 125px;
+            width: 600px;
+        }
+
+        .dish_information {
+            width: 500px;
+        }
+    }
+
+
+    .price_order_section {
+        gap: 410px;
     }
 }
