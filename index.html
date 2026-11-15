@@ -102,7 +102,25 @@
                 </div>
 
                 <section class="basket_section">
-                    <div class="basket_area">
+                    <div class="basket_mobile_section">
+                        <a href="#" aria-label="Home">
+                            <img src="./assets/icons/home_icon.svg" alt="home button">
+                        </a>
+                        <a href="#" aria-label="Profile">
+                            <img src="./assets/icons/profile_icon.svg" alt="profile icon">
+                        </a>
+                        <a href="#" aria-label="Takeout">
+                            <img src="./assets/icons/takeout_dining.svg" alt="shopping bag icon">
+                        </a>
+                        <button class="basket_toggle" type="button" onclick="toggleBasket()" aria-label="open shopping cart" aria-expanded="false">
+                            <img src="./assets/icons/shopping_cart.svg" alt="basket icon">
+                        </button>
+                    </div>
+                    <div class="basket_area" id="basketArea">
+                        <div class="basket_mobile_header">
+                            <h2>Your Basket</h2>
+                            <button type="button" onclick="toggleBasket()" aria-label="close shopping cart">&times;</button>
+                        </div>
                         <h2 class="basket_header">Your Basket</h2>
                         <div class="basket_information" id="basketItems"></div>
                     </div>

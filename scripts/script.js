@@ -193,3 +193,20 @@ function openCloseDialog() {
 function stopPropagation(event) {
     event.stopPropagation();
 }
+
+
+//==================================================
+// Basket Mobile Menu
+//==================================================
+
+
+function toggleBasket() {
+    const basketArea = document.getElementById('basketArea');
+    const basketButton = document.querySelector('.basket_toggle');
+
+    basketArea.classList.toggle('open');
+
+    const isOpen = basketArea.classList.contains('open');
+
+    basketButton.setAttribute('aria-expended', isOpen);
+}

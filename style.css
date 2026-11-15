@@ -302,6 +302,11 @@ header {
 }
 
 
+.basket_mobile_section, .basket_mobile_header {
+    display: none;
+}
+
+
 .submit_order_button {
     text-align: center;
     
@@ -701,115 +706,6 @@ footer {
             padding: 8px 400px 8px 32px;
         }
     }
-
-
-    .basket_section {
-        margin-top: 80px;
-        visibility: hidden;
-
-        .basket_area {
-            width: 100%;
-            height: 128px;
-
-            background-image: linear-gradient(to bottom, var(--footer-background-top-color), var(--footer-background-bottom-color));
-        }
-    }
-
-    /* .basket_section {
-    
-
-    .basket_area {
-        position: fixed;
-        bottom: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        width: 100%;
-        height: 128px;
-
-        box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
-
-        border-radius: 24px;
-    
-        .basket_header {
-            display: flex;
-            justify-content: center;
-
-            padding-top: 80px;
-
-            font-size: clamp(24px, 4vw, 32px);
-
-            color: var(--website-title-highlight-color);
-        }
-
-        .basket_information {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-            padding-top: 40px;
-
-            font-size: 20px;
-
-            color: var(--dish-title-color);
-
-            overflow: overlay;
-            height: 450px;
-
-            .total_price {
-                position: absolute;
-                top: 600px;
-                left: 150px;
-                right: 140px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-
-                .subtotal, .tax {
-                    display: flex;
-                    align-items: center;
-
-                    gap: 24px;
-
-                    > h3 {
-                    color: var(--website-title-highlight-color);
-                    }
-                }
-
-                .seperation {
-                    border: 1px solid var(--website-title-color);
-
-                    margin-top: 12px;
-
-                    width: 300px;
-                }
-
-                .total {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    margin-top: 12px;
-
-                    > h3 {
-                    font-size: 28px;
-
-                    color: var(--trash-can-border-color);
-                    }
-
-                    > span {
-                        font-size: 24px;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-    }
-} */
     
 
     .dish_card {
@@ -819,6 +715,108 @@ footer {
 
         width: 764px;
         height: 350px;
+    }
+
+
+    .basket_section {
+        margin-top: 0;
+    }
+
+
+    .basket_area {
+        position: fixed;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 75dvh;
+
+        margin: 0;
+
+        background-color: var(--website-color);
+
+        border-radius: 24px 24px 0 0;
+
+        box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
+
+        z-index: 1000;
+
+        transform: translateY(100%);
+        transition: transform 0.35s ease;
+
+        visibility: hidden;
+    }
+
+
+    .basket_area.open {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+
+    .basket_header {
+        display: none;
+    }
+
+
+    .basket_mobile_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        padding: 24px;
+
+        > h2 {
+            color: var(--website-title-highlight-color);
+        }
+
+        > button {
+            font-size: 32px;
+
+            border: none;
+            background: none;
+
+            color: var(--website-title-highlight-color);
+        }
+    }
+
+
+    .basket_mobile_section {
+        position: fixed;
+
+        left: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 80px;
+
+        background-color: var(--website-title-highlight-color);
+
+        z-index: 1001;
+
+            a, button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 48px;
+                height: 48px;
+
+                border: none;
+                background: none;
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
     }
 
 
