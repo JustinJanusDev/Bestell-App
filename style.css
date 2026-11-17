@@ -205,10 +205,20 @@ header {
 }
 
 
-.basket_section {
-    margin-top: 80px;
+.basket_section .basket_area {
+    display: flex;
+    flex-direction: column;
 
-    .basket_area {
+    height: 700px;
+    max-height: calc(100dvh - 48px);
+
+    overflow: hidden;
+
+    box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
+
+    border-radius: 24px;
+
+    /* .basket_area {
         position: sticky;
         top: 24px;
 
@@ -217,11 +227,12 @@ header {
         align-items: center;
 
         width: 450px;
-        height: 900px;
+        min-height: 400px;
+        height: auto;
 
         box-shadow: 0px 0px 10px 2px var(--website-title-highlight-color);
 
-        border-radius: 24px;
+        border-radius: 24px; */
     
         .basket_header {
             display: flex;
@@ -239,27 +250,33 @@ header {
             flex-direction: column;
             text-align: center;
 
-            padding-top: 40px;
+            flex: 1;
+
+            min-height: 0;
+            height: auto;
+
+            padding: 24px;
 
             font-size: 20px;
 
             color: var(--dish-title-color);
 
-            overflow: overlay;
-            height: 450px;
+            overflow-y: auto;
 
-            .total_price {
-                position: absolute;
-                top: 600px;
-                left: 150px;
-                right: 140px;
+            /* .total_price {
+                position: static;
 
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
 
-                .subtotal, .tax {
+                width: 100%;
+
+                margin-top: 24px;
+                margin-bottom: 24px;
+
+                /*.subtotal, .tax {
                     display: flex;
                     align-items: center;
 
@@ -268,17 +285,17 @@ header {
                     > h3 {
                     color: var(--website-title-highlight-color);
                     }
-                }
+                }*/
 
-                .seperation {
+                /* .seperation {
                     border: 1px solid var(--website-title-color);
 
                     margin-top: 12px;
 
                     width: 300px;
-                }
+                } */
 
-                .total {
+                /*.total {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -296,9 +313,79 @@ header {
                         font-weight: 700;
                     }
                 }
+            } */
+
+        }
+        
+
+        .basket_total {
+            flex-shrink: 0;
+        }
+
+
+        .basket_total .total_price {
+            position: static;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+        }
+
+
+        .basket_total .subtotal,
+        .basket_total .tax {
+            display: flex;
+            align-items: center;
+
+            gap: 24px;
+
+            > h3 {
+                font-size: 24px;
+
+                color: var(--website-title-highlight-color);
+            }
+
+            > span {
+                font-size: 24px;
+
+                color: var(--dish-title-color);
             }
         }
-    }
+
+        .basket_total .seperation {
+            border: 1px solid var(--website-title-color);
+
+            margin-top: 12px;
+
+            width: 300px;
+        }
+
+
+        .basket_total .total {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 12px;
+            margin-bottom: 24px;
+
+                > h3 {
+                    font-size: 32px;
+
+                    color: var(--trash-can-border-color);
+                }
+
+                > span {
+                    font-size: 28px;
+                    font-weight: 700;
+
+                    color: var(--dish-title-color);
+                }
+                
+        }
+
 }
 
 
@@ -397,6 +484,8 @@ header {
     }
 
     .order_button {
+        position: relative;
+
         width: 96px;
         height: 40px;
 
@@ -405,7 +494,39 @@ header {
         background-color: var(--website-color);
 
         color: var(--website-title-color);
+    
     }
+            
+    .order_badge {
+        position: absolute;
+
+        top: -10px;
+        right: -10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 24px;
+        height: 24px;
+
+        padding: 2px;
+
+        border-radius: 50%;
+
+        background-color: var(--trash-can-background-color);
+
+        color: var(--website-color);
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+
+    .order_badge[hidden] {
+        display: none;
+    }
+    
 }
 
 
@@ -693,17 +814,23 @@ footer {
 
     .menu_section {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        padding-right: 64px;
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    .menu_content {
+        width: 100%;
+        margin-top: 32px;
     }
 
     .category_section {
+        margin-bottom: 48px;
 
         .category_header {
-            padding: 8px 400px 8px 32px;
+            padding: 8px 24px;
         }
     }
     
@@ -713,17 +840,51 @@ footer {
         flex-direction: column;
         justify-content: space-between;
 
-        width: 764px;
+        width: 100%;
+        max-width: 764px;
         height: 350px;
+    }
+
+    .dish_card_body {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        > img {
+            width: 100%;
+        }
+    }
+
+
+    .dish_information {
+            width: 100%;
+        }
+
+    
+    .dish_name_delete_icon {
+        width: 100%;
+    }
+
+
+    .price_order_section {
+        justify-content: space-between;
+        align-items: center;
+        
+        gap: 16px;
+
+        width: 100%;
     }
 
 
     .basket_section {
-        margin-top: 0;
+        width: 100%;
+
+        margin: 0;
     }
 
 
-    .basket_area {
+    .basket_section .basket_area {
         position: fixed;
 
         left: 0;
@@ -731,8 +892,12 @@ footer {
 
         width: 100%;
         height: 75dvh;
+        max-height: 75dvh;
 
-        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
 
         background-color: var(--website-color);
 
@@ -742,14 +907,14 @@ footer {
 
         z-index: 1000;
 
-        transform: translateY(100%);
-        transition: transform 0.35s ease;
+        transform: translateY(calc(100% + 80px));
+        transition: transform 0.35s ease, visibility 0.35s ease;
 
         visibility: hidden;
     }
 
 
-    .basket_area.open {
+    .basket_section .basket_area.open {
         transform: translateY(0);
         visibility: visible;
     }
@@ -761,13 +926,7 @@ footer {
 
 
     .basket_mobile_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        width: 100%;
-
-        padding: 24px;
+        flex-shrink: 0;
 
         > h2 {
             color: var(--website-title-highlight-color);
@@ -781,6 +940,23 @@ footer {
 
             color: var(--website-title-highlight-color);
         }
+    }
+
+
+    .basket_information {
+        flex: 1;
+
+        min-height: 0;
+        width: 100%;
+
+        overflow-y: auto;
+    }
+
+
+    .basket_total {
+        flex-shrink: 0;
+
+        width: 100%;
     }
 
 
@@ -820,20 +996,17 @@ footer {
     }
 
 
-    .dish_card_body {
-
-        > img {
-            height: 125px;
-            width: 600px;
-        }
-
-        .dish_information {
-            width: 500px;
-        }
+    .basket_dish_card {
+        width: 100%;
     }
 
 
-    .price_order_section {
-        gap: 410px;
+    .basket_dish_body {
+        width: 100%;
+    }
+
+
+    footer {
+        margin-top: 32px;
     }
 }

@@ -76,6 +76,30 @@ function addMenuToBasket(dishId) {
 }
 
 
+function updateDishBadges() {
+    for (let category of websiteDishes) {
+        for (let dish of category.dishes) {
+            
+            const order = basket.find(
+                item => item.dishId === dish.dishId
+            );
+            
+            const badge = document.getElementById(`orderBadge${dish.dishId}`);
+
+            if(!badge) {
+                continue;
+            }
+
+            if(order) {
+                badge.textContent = order ? order.quantity: "";
+            } else {
+                badge.hidden = !order;
+            }
+        }
+    }
+}
+
+
 //==================================================
 // Calculate the Quantity
 //==================================================
@@ -140,8 +164,11 @@ function deleteOrder(dishId) {
 
 function renderBasket() {
     const basketContainer = document.getElementById('basketItems');
+    const basketTotal = document.getElementById('basketTotal');
 
-    if(!basketContainer) {
+    updateDishBadges();
+
+    if(!basketContainer || !basketTotal) {
         return;
     }
 
@@ -149,7 +176,10 @@ function renderBasket() {
         basketContainer.innerHTML = `
         <span> Nothing here yet. </span>
         <span> Go ahead and choose something delicious! </span>
-        `
+        `;
+
+        basketTotal.innerHTML = "";
+
         return;
     }
 
@@ -165,9 +195,9 @@ function renderBasket() {
     const tax = subtotal * taxRate;
     const total = subtotal + tax;
 
-    basketHTML += basketSummary(subtotal, tax, total);
-
     basketContainer.innerHTML = basketHTML;
+
+    basketTotal.innerHTML = basketSummary(subtotal, tax, total);
 }
 
 
@@ -184,7 +214,7 @@ function toggleBasket() {
 
     const isOpen = basketArea.classList.contains('open');
 
-    basketButton.setAttribute('aria-expended', isOpen);
+    basketButton.setAttribute('aria-expanded', isOpen);
 }
 
 

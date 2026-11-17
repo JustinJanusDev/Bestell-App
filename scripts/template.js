@@ -28,7 +28,10 @@ function createDishCard(dish) {
         </section>
         <section class='price_order_section'>
             <p class='dish_price'>${formatPrice(dish.price)}</p>
-            <button class='order_button' type='button' data-id='${dish.dishId}' onclick='addMenuToBasket(${dish.dishId})'>Add to Basket</button>
+            <button class='order_button' type='button' data-id='${dish.dishId}' onclick='addMenuToBasket(${dish.dishId})'>
+                Add to Basket
+                <span class='order_badge' id='orderBadge${dish.dishId}'></span>
+            </button>
         </section>
     </article>
     `
