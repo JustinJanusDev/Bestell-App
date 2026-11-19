@@ -91,9 +91,11 @@ function updateDishBadges() {
             }
 
             if(order) {
-                badge.textContent = order ? order.quantity: "";
+                badge.textContent = order.quantity;
+                badge.hidden = false;
             } else {
-                badge.hidden = !order;
+                badge.textContent = "";
+                badge.hidden = true;
             }
         }
     }
