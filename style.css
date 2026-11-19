@@ -205,6 +205,15 @@ header {
 }
 
 
+.basket_section {
+    position: sticky;
+
+    top: 24px;
+
+    align-self: flex-start;
+}
+
+
 .basket_section .basket_area {
     display: flex;
     flex-direction: column;
