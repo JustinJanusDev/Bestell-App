@@ -243,6 +243,7 @@ header {
             display: flex;
             flex-direction: column;
             text-align: center;
+            align-items: center;
 
             flex: 1 1 0;
 
@@ -483,7 +484,6 @@ header {
     min-height: 150px;
     width: 100%;
     min-width: 0;
-    max-width: 400px;
 
     border-radius: 24px;
 
@@ -779,6 +779,15 @@ footer {
             padding: 8px 24px;
         }
     }
+
+
+    .menu_dishes {
+        > #sectionBurger, #sectionPizza, #sectionSalad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     
 
     .dish_card {
@@ -969,5 +978,115 @@ footer {
     footer {
         margin-top: 32px;
         margin-bottom: 80px;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+
+    .basket_dish_body {
+        .order_quantity {
+            width: 240px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header {
+        .title {
+            flex-direction: column;
+            align-items: center;
+
+            gap: 4px;
+
+            padding-bottom: 24px;
+        }
+
+        > span {
+            text-align: center;
+
+            padding: 0 24px;
+        }
+    }
+
+
+    .quick_navigation {
+        padding: 0 24px;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    
+    .basket_dish_body {
+        .order_quantity {
+            width: 150px;
+        }
+    }
+
+    footer {
+        .footer_links {
+            flex-direction: column;
+
+            gap: 8px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .quick_navigation {
+        padding: 12px 24px;
+
+        overflow: auto;
+
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+    }
+
+
+    .dish_card_body {
+        & .dish_information {
+            width: 320px;
+
+            > p {
+                flex-wrap: wrap;
+
+                max-width: 280px;
+            }
+        }
+    }
+
+
+    .basket_dish_body {
+        .order_quantity {
+            gap: 8px;
+
+            width: 120px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .dish_card_body {
+        & .dish_information {
+            width: 200px;
+
+            > h3, p {
+                flex-wrap: wrap;
+
+                max-width: 200px;
+            }
+        }
+    }
+
+
+    .dish_card {
+        height: 380px;
     }
 }
