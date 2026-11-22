@@ -157,3 +157,20 @@ footer {
         }
     }
 }
+
+
+/*==================================================
+// responsive
+//================================================*/
+
+
+@media screen and (max-width: 575px) {
+
+    footer {
+        .footer_links {
+            flex-direction: column;
+
+            gap: 8px;
+        }
+    }
+}
