@@ -114,9 +114,11 @@
                         </a>
                         <button class="basket_toggle" type="button" onclick="toggleBasket()" aria-label="open shopping cart" aria-expanded="false">
                             <img src="./assets/icons/shopping_cart.svg" alt="basket icon">
+                            <span class="basket_badge" id="basketBadge" hidden></span>
                         </button>
                     </div>
                     <div class="basket_area" id="basketArea">
+                        <button class="basket_resize_handle" id="basketResizeHandle" type="button" aria-label="Change basket height"></button>
                         <div class="basket_mobile_header">
                             <h2>Your Basket</h2>
                             <button type="button" onclick="toggleBasket()" aria-label="close shopping cart">&times;</button>
@@ -150,7 +152,7 @@
         <div class="footer_links">
         <a href="">
             <img src="./assets/icons/copyright_symbol.svg" alt="copyright icon">
-            2025 BurgerHouse
+            <span>2025 BurgerHouse</span>
         </a>
         <a href="impressum.html">Imprint</a>
         <a href="">Cookie Preferences</a>
