@@ -1,27 +1,21 @@
 :root {
-    --website-color: rgb(34, 34, 34);
+    --background-header-color: rgb(20, 33, 61);
+    --background-title-header-color: rgb(150, 19, 19);
 
-    --header-background-top-color: rgb(241, 110, 226);
-    --header-background-bottom-color: rgb(248, 200, 243);
+    --background-main-color: rgb(241, 236, 227);
 
-    --footer-background-bottom-color: rgb(241, 110, 226);
-    --footer-background-top-color: rgb(248, 200, 243);
+    --highlight-color: rgb(255, 176, 32);
+    --background-highlight-color: rgb(31, 50, 94);
 
-    --website-title-color: rgb(214, 214, 214);
-    --website-title-highlight-color: rgb(52, 226, 242);
+    --headline-font-color: rgb(24, 24, 24);
+    --main-font-color: rgb(241, 236, 227);
+    --text-font-color: rgb(58, 58, 58);
 
-    --nav-button-background-color: rgb(250, 209, 180);
-    --nav-button-text-color: rgba(54, 53, 52);
+    --dish-background-color: rgb(250, 209, 180);
 
-    --dish-title-box-color: rgb(248, 200, 243);
+    --trash-can-color: rgb(235, 122, 122);
+
+    --dialog-color-one: rgb(52, 226, 242);
+    --dialog-color-two: rgb(248, 200, 243);
     --dish-title-color: rgb(214, 214, 214);
-    --dish-background-color: rgb(138, 235, 244);
-
-    --basket-font-color: rgba(255, 255, 255);
-
-    --trash-can-background-color: rgb(247, 158, 158);
-    --trash-can-border-color: rgb(243, 117, 117);
-
-    --quantity-button-border-color: rgb(250, 184, 137);
-    --quantity-button-background-color: rgb(250, 166, 106);
 }
